@@ -1,13 +1,14 @@
 from tkinter import *
 import speedtest
 
-root = Tk()
+root = Tk() # object of tkinter module
 root.title("Internet Speed Meter")
-root.geometry('500x700')
-root.config(bg="blue")
+root.geometry('500x700') # default size of tkinter window
+root.config(bg="blue") # background color of the window
 
 
 def speedcheck():
+    # Function which does internet speed test
     s = speedtest.Speedtest()  # s is the object of speedtest module
     s.get_servers()
     
@@ -45,5 +46,5 @@ test_button = Button(root, text = "Start Test", font=('Arial', 30, 'bold'),
                      relief='ridge', bg='red', fg='white', command=speedcheck)
 test_button.place(x=40, y=460, height=50, width=380)
 
-
+# mainloop at the end of the line which creates the tkinter window
 root.mainloop()
