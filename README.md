@@ -1,6 +1,9 @@
 # InternetSpeedTest
 Tkinter UI to check your internet speed using python
 
+![image](https://user-images.githubusercontent.com/29086241/234957925-a8ba8df0-e07e-44df-b5bf-14ba9e3c3082.png)
+
+
 ## Installation
 
     pip install speedtest-cli
