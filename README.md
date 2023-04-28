@@ -2,6 +2,9 @@
 Tkinter UI to check your internet speed using python
 
 ![image](https://user-images.githubusercontent.com/29086241/234957925-a8ba8df0-e07e-44df-b5bf-14ba9e3c3082.png)
+# Demo of UI Branch 
+![image](https://user-images.githubusercontent.com/29086241/235067657-d48dc3dc-f280-48e8-b943-a7477b84f889.png)
+
 
 
 ## Installation
