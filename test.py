@@ -1,5 +1,7 @@
 from tkinter import *
 import speedtest
+import time
+from PIL import ImageTk, Image
 
 root = Tk()  # object of tkinter module
 root.title("Internet Speed Meter")
@@ -26,6 +28,11 @@ def speedcheck():
     # Gives url of the image which contains the test results.
     result_img = st_obj.results.share()
     print(result_img)
+
+    for i in range(1, 11):
+        root.update()
+        time.sleep(1)
+        countdown.config(text=i)
 
 
 heading_back = Label(root, bg='#252422', borderwidth=5, relief=SOLID)
@@ -54,6 +61,9 @@ up_speed_result.place(x=370, y=290, height=50, width=180)
 test_button = Button(root, text="Start Test", font=('Arial', 30, 'bold'), bd=3,
                      relief='ridge', bg='#22223b', fg='white', command=speedcheck)
 test_button.place(x=40, y=480, height=70, width=520)
+
+countdown = Label(root, text='0', font=('arial', 70, 'bold'), bg='#1b4965')
+countdown.place(x=270, y=360)
 
 # mainloop at the end of the line which creates the tkinter window
 root.mainloop()
