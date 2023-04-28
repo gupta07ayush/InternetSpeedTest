@@ -3,7 +3,7 @@ import speedtest
 
 root = Tk()  # object of tkinter module
 root.title("Internet Speed Meter")
-root.geometry('500x700')  # default size of tkinter window
+root.geometry('460x600')  # default size of tkinter window
 root.config(bg="blue")  # background color of the window
 
 
@@ -49,7 +49,7 @@ up_speed_result = Label(root, text="00", font=(
 up_speed_result.place(x=40, y=360, height=50, width=380)
 
 test_button = Button(root, text="Start Test", font=('Arial', 30, 'bold'),
-                     relief='ridge', bg='red', fg='white', command=speedcheck)
+                     relief='ridge', bg='black', fg='white', command=speedcheck)
 test_button.place(x=40, y=460, height=50, width=380)
 
 # mainloop at the end of the line which creates the tkinter window
