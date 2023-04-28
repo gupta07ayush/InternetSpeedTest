@@ -8,23 +8,23 @@ root.config(bg="blue")  # background color of the window
 
 
 def speedcheck():
-    # Function which does internet speed test
-    s = speedtest.Speedtest()  # s is the object of speedtest module
-    s.get_servers()
+    ''' Function which does internet speed test '''
+    st_obj = speedtest.Speedtest()  # s is the object of speedtest module
+    st_obj.get_servers()
 
-    down = s.download()  # gives download speed in bits
+    down = st_obj.download()  # gives download speed in bits
     down = round(down / (10**6), 2)  # converts MBps into Mbps
     down = str(down) + " Mbps"
 
     # use single line to do the same to down which took 3 lines
-    up = str(round(s.upload() / (10**6), 2)) + " Mbps"
+    up = str(round(st_obj.upload() / (10**6), 2)) + " Mbps"
 
     # sends down and up test results to tkinter label
     down_speed_result.config(text=down)
     up_speed_result.config(text=up)
 
     # Gives url of the image which contains the test results.
-    result_img = s.results.share()
+    result_img = st_obj.results.share()
     print(result_img)
 
 
